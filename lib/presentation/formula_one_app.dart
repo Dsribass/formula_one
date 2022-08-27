@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:formula_one/generated/l10n.dart';
-import 'package:formula_one/presentation/common/common.dart';
+import 'package:formula_one/presentation/common/routing.dart';
 import 'package:formula_one/presentation/common/theme/formula_one_theme.dart';
 import 'package:routemaster/routemaster.dart';
 
