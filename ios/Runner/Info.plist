@@ -45,5 +45,9 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>CFBundleLocalizations</key>
+    <array>
+        <string>pt_BR</string>
+    </array>
 </dict>
 </plist>
