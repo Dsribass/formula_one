@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:formula_one/generated/l10n.dart';
 import 'package:formula_one/presentation/common/routing.dart';
-import 'package:formula_one/presentation/common/theme/formula_one_theme.dart';
+import 'package:formula_one/presentation/common/theme/app_themes.dart';
 import 'package:routemaster/routemaster.dart';
 
 class FormulaOneApp extends StatelessWidget {
@@ -10,8 +10,6 @@ class FormulaOneApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = FormulaOneTheme.of(context);
-
     return MaterialApp.router(
       title: 'Formula One',
       localizationsDelegates: const [
@@ -20,8 +18,8 @@ class FormulaOneApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      theme: theme.light,
-      darkTheme: theme.dark,
+      theme: AppThemes.light,
+      darkTheme: AppThemes.dark,
       supportedLocales: S.delegate.supportedLocales,
       routerDelegate: RoutemasterDelegate(
         routesBuilder: (_) => AppRouteMap(),
