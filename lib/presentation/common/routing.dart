@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:formula_one/presentation/common/bottom_navigation_bar_page.dart';
+import 'package:formula_one/presentation/common/components/bottom_navigation_bar_page.dart';
 import 'package:formula_one/presentation/standings/constructor/standings_constructor_page.dart';
 import 'package:formula_one/presentation/standings/driver/standings_driver_page.dart';
 import 'package:routemaster/routemaster.dart';
