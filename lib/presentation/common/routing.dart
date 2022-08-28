@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:formula_one/presentation/common/components/bottom_navigation_bar_page.dart';
-import 'package:formula_one/presentation/standings/constructor/standings_constructor_page.dart';
-import 'package:formula_one/presentation/standings/driver/standings_driver_page.dart';
+import 'package:formula_one/presentation/standings/constructor/constructor_standings_page.dart';
+import 'package:formula_one/presentation/standings/driver/driver_standings_page.dart';
 import 'package:routemaster/routemaster.dart';
 
 const String _landing = '/';
@@ -20,10 +20,10 @@ class AppRouteMap extends RouteMap {
                   ],
                 ),
             _standingsDriver: (_) => const MaterialPage(
-                  child: StandingsDriverPage(),
+                  child: DriverStandingsPage(),
                 ),
             _standingsConstructor: (_) => const MaterialPage(
-                  child: StandingsConstructorPage(),
+                  child: ConstructorStandingsPage(),
                 ),
           },
         );

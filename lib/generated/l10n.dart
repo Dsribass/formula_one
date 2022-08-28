@@ -49,6 +49,26 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Classificação`
+  String get standingsScaffoldTitle {
+    return Intl.message(
+      'Classificação',
+      name: 'standingsScaffoldTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pilotos`
+  String get standingsDriverTitle {
+    return Intl.message(
+      'Pilotos',
+      name: 'standingsDriverTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

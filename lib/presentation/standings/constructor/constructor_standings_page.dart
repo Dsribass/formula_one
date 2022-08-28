@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StandingsConstructorPage extends StatelessWidget {
-  const StandingsConstructorPage({Key? key}) : super(key: key);
+class ConstructorStandingsPage extends StatelessWidget {
+  const ConstructorStandingsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
