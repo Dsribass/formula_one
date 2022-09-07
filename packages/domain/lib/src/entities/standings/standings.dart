@@ -1,11 +1,14 @@
-class Standings {
+import '../type_aliases.dart';
+import 'standing.dart';
+
+class Standings<T extends Standing> {
   const Standings({
-    required this.points,
-    required this.position,
-    required this.wins,
+    required this.year,
+    required this.round,
+    required this.standings,
   });
 
-  final int position;
-  final double points;
-  final int wins;
+  final Year year;
+  final int round;
+  final List<T> standings;
 }

@@ -1,5 +1,5 @@
 import '../entities/entities.dart';
 
 abstract class IDriverRepository {
-  Future<StandingsList<DriverStandings>> getDriverStandings({required Year year});
+  Future<Standings<DriverStanding>> getDriverStandings({required Year year});
 }

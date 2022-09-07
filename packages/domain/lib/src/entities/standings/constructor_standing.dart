@@ -1,8 +1,8 @@
-import 'standings.dart';
+import 'standing.dart';
 import '../constructor/constructor.dart';
 
-class ConstructorStandings extends Standings {
-  const ConstructorStandings({
+class ConstructorStanding extends Standing {
+  const ConstructorStanding({
     required double points,
     required int position,
     required int wins,

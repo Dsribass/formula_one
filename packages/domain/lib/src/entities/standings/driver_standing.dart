@@ -1,9 +1,9 @@
-import 'standings.dart';
+import 'standing.dart';
 import '../constructor/constructor.dart';
 import '../driver/driver.dart';
 
-class DriverStandings extends Standings {
-  const DriverStandings({
+class DriverStanding extends Standing {
+  const DriverStanding({
     required double points,
     required int position,
     required int wins,
