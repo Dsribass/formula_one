@@ -8,7 +8,7 @@ class GetCurrentDriverStandings
     required this.repository,
   });
 
-  final IDriverRepository repository;
+  final IStandingsRepository repository;
 
   @override
   Future<Standings<DriverStanding>> execute(NoParams params) =>
