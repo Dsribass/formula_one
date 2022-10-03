@@ -5,25 +5,29 @@ abstract class DomainException implements Exception {
 }
 
 class NoConnectionException extends DomainException {
-  NoConnectionException(super.baseError);
+  NoConnectionException([super.baseError]);
 }
 
 class UnauthorizedException extends DomainException {
-  UnauthorizedException(super.baseError);
+  UnauthorizedException([super.baseError]);
 }
 
 class TimeoutException extends DomainException {
-  TimeoutException(super.baseError);
+  TimeoutException([super.baseError]);
+}
+
+class ForbiddenException extends DomainException {
+  ForbiddenException([super.baseError]);
 }
 
 class BadRequestException extends DomainException {
-  BadRequestException(super.baseError);
+  BadRequestException([super.baseError]);
 }
 
 class InternalServerException extends DomainException {
-  InternalServerException(super.baseError);
+  InternalServerException([super.baseError]);
 }
 
 class UnexpectedException extends DomainException {
-  UnexpectedException(super.baseError);
+  UnexpectedException([super.baseError]);
 }
