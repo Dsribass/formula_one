@@ -8,9 +8,9 @@ part of 'driver_standing_rm.dart';
 
 DriverStandingRM _$DriverStandingRMFromJson(Map<String, dynamic> json) =>
     DriverStandingRM(
-      points: (json['points'] as num).toDouble(),
-      position: json['position'] as int,
-      wins: json['wins'] as int,
+      points: json['points'] as String,
+      position: json['position'] as String,
+      wins: json['wins'] as String,
       driver: DriverRM.fromJson(json['Driver'] as Map<String, dynamic>),
       constructors: (json['Constructors'] as List<dynamic>)
           .map((e) => ConstructorRM.fromJson(e as Map<String, dynamic>))

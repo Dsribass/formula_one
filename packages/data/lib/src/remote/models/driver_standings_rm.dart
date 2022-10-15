@@ -14,10 +14,13 @@ class DriverStandingsDataRM extends ErgastApiRM {
     required this.driverStandingsRM,
   });
 
-  @JsonKey(name: 'StandingsList', readValue: readValue)
-  final DriverStandingsRM driverStandingsRM;
+  @JsonKey(name: 'StandingsLists', readValue: readValue)
+  final List<DriverStandingsRM> driverStandingsRM;
 
-  static Object? readValue(Map json, String key) => json['StandingsTable'][key];
+  static Object? readValue(Map json, String standingsList) {
+    final standingsTable = ErgastApiRM.getData(json)['StandingsTable'];
+    return standingsTable[standingsList];
+  }
 
   factory DriverStandingsDataRM.fromJson(Map<String, dynamic> json) =>
       _$DriverStandingsDataRMFromJson(json);

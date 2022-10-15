@@ -20,11 +20,11 @@ class DriverStandingRM {
   @JsonKey(name: 'Constructors')
   final List<ConstructorRM> constructors;
   @JsonKey(name: 'points')
-  final double points;
+  final String points;
   @JsonKey(name: 'position')
-  final int position;
+  final String position;
   @JsonKey(name: 'wins')
-  final int wins;
+  final String wins;
 
   factory DriverStandingRM.fromJson(Map<String, dynamic> json) =>
       _$DriverStandingRMFromJson(json);
