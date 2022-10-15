@@ -60,3 +60,8 @@ class HttpClientDio extends DioForNative {
     throw UnexpectedException(e);
   }
 }
+
+class StandingsHttpClientDio extends HttpClientDio {
+  StandingsHttpClientDio(BaseOptions baseOptions) : super(baseOptions);
+}
+
