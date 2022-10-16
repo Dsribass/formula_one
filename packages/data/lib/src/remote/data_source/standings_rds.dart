@@ -1,6 +1,5 @@
-import '../infra/path_builder.dart';
-import '../models/driver_standings_rm.dart';
-import '../remote.dart';
+import '../infra/infra.dart';
+import '../models/models.dart';
 
 abstract class IStandingsRDS {
   Future<DriverStandingsRM> getDriverStandings(int year);
