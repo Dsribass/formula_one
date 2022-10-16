@@ -1,5 +1,5 @@
 class PathBuilder {
-  StandingsPath get standingsPath => StandingsPath();
+  static StandingsPath get standingsPath => StandingsPath();
 }
 
 class StandingsPath {
