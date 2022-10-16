@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-abstract class ErgastApiRM {
-  const ErgastApiRM({
+abstract class ApiDataRM {
+  const ApiDataRM({
     required this.limit,
     required this.offset,
     required this.total,

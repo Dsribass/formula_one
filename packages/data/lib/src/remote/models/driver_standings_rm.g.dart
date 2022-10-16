@@ -9,9 +9,9 @@ part of 'driver_standings_rm.dart';
 DriverStandingsDataRM _$DriverStandingsDataRMFromJson(
         Map<String, dynamic> json) =>
     DriverStandingsDataRM(
-      limit: ErgastApiRM.readLimitValue(json, 'limit') as String,
-      offset: ErgastApiRM.readOffsetValue(json, 'offset') as String,
-      total: ErgastApiRM.readTotalValue(json, 'total') as String,
+      limit: ApiDataRM.readLimitValue(json, 'limit') as String,
+      offset: ApiDataRM.readOffsetValue(json, 'offset') as String,
+      total: ApiDataRM.readTotalValue(json, 'total') as String,
       driverStandingsRM:
           (DriverStandingsDataRM.readValue(json, 'StandingsLists')
                   as List<dynamic>)

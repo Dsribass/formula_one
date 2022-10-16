@@ -1,12 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'driver_standing_rm.dart';
-import 'ergast_api_rm.dart';
+import 'api_data_rm.dart';
 
 part 'driver_standings_rm.g.dart';
 
 @JsonSerializable()
-class DriverStandingsDataRM extends ErgastApiRM {
+class DriverStandingsDataRM extends ApiDataRM {
   const DriverStandingsDataRM({
     required super.limit,
     required super.offset,
@@ -18,7 +18,7 @@ class DriverStandingsDataRM extends ErgastApiRM {
   final List<DriverStandingsRM> driverStandingsRM;
 
   static Object? readValue(Map json, String standingsList) {
-    final standingsTable = ErgastApiRM.getData(json)['StandingsTable'];
+    final standingsTable = ApiDataRM.getData(json)['StandingsTable'];
     return standingsTable[standingsList];
   }
 
