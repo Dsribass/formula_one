@@ -24,7 +24,7 @@ void main() {
       ).thenAnswer(
         (_) async => Response(
           requestOptions: RequestOptions(path: ''),
-          data: mockDriverStandingsJson,
+          data: _mockDriverStandingsJson,
         ),
       );
 
@@ -37,7 +37,7 @@ void main() {
   });
 }
 
-const mockDriverStandingsJson = {
+const _mockDriverStandingsJson = {
   "MRData": {
     "xmlns": "http://ergast.com/mrd/1.5",
     "series": "f1",
