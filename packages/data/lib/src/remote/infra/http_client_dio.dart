@@ -3,7 +3,9 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:dio/native_imp.dart';
 import 'package:domain/domain.dart';
+import 'package:meta/meta.dart';
 
+@internal
 class HttpClientDio extends DioForNative {
   HttpClientDio([BaseOptions? baseOptions]) : super(baseOptions);
 
@@ -62,6 +64,10 @@ class HttpClientDio extends DioForNative {
 }
 
 class StandingsHttpClientDio extends HttpClientDio {
-  StandingsHttpClientDio(BaseOptions baseOptions) : super(baseOptions);
+  StandingsHttpClientDio(String baseUrl)
+      : super(
+          BaseOptions(
+            baseUrl: baseUrl,
+          ),
+        );
 }
-
