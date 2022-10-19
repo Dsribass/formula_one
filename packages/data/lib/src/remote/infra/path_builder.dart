@@ -1,10 +1,9 @@
-class PathBuilder {
-  static StandingsPath get standingsPath => StandingsPath();
+abstract class PathBuilder {
+  StandingsPath get standingsPath;
 }
 
-class StandingsPath {
-  String driverStandingsPath(int year) => 'api/f1/$year/driverStandings.json';
+abstract class StandingsPath {
+  String driverStandingsPath(int year);
 
-  String constructorStandingsPath(int year) =>
-      'api/f1/$year/constructorStandings.json';
+  String constructorStandingsPath(int year);
 }

@@ -8,14 +8,16 @@ abstract class IStandingsRDS {
 class ApiStandingsRDS implements IStandingsRDS {
   ApiStandingsRDS({
     required this.dio,
+    required this.pathBuilder,
   });
 
   final StandingsHttpClientDio dio;
+  final PathBuilder pathBuilder;
 
   @override
   Future<DriverStandingsRM> getDriverStandings(int year) async {
     final response = await dio.get(
-      PathBuilder.standingsPath.driverStandingsPath(year),
+      pathBuilder.standingsPath.driverStandingsPath(year),
     );
 
     return DriverStandingsDataRM.fromJson(

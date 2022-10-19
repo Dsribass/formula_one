@@ -1,20 +1,25 @@
-import 'package:data/src/remote/data_source/standings_rds.dart';
-import 'package:data/src/remote/infra/http_client_dio.dart';
-import 'package:data/src/remote/models/driver_standings_rm.dart';
+import 'package:data/data.dart';
 import 'package:dio/dio.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
+import '../common.dart';
+
 class MockDio extends Mock implements StandingsHttpClientDio {}
 
 void main() {
   late final MockDio dio;
+  late final MockPathBuilder pathBuilder;
   late final ApiStandingsRDS standingsRDS;
 
   setUp(() {
     dio = MockDio();
-    standingsRDS = ApiStandingsRDS(dio: dio);
+    pathBuilder = MockPathBuilder();
+    standingsRDS = ApiStandingsRDS(
+      dio: dio,
+      pathBuilder: pathBuilder,
+    );
   });
 
   group('getDriverStandings', () {
