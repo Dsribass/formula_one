@@ -63,8 +63,8 @@ class HttpClientDio extends DioForNative {
   }
 }
 
-class StandingsHttpClientDio extends HttpClientDio {
-  StandingsHttpClientDio(String baseUrl)
+class FormulaOneHttpClientDio extends HttpClientDio {
+  FormulaOneHttpClientDio(String baseUrl)
       : super(
           BaseOptions(
             baseUrl: baseUrl,

@@ -6,7 +6,7 @@ import 'package:test/scaffolding.dart';
 
 import '../common.dart';
 
-class MockDio extends Mock implements StandingsHttpClientDio {}
+class MockDio extends Mock implements FormulaOneHttpClientDio {}
 
 void main() {
   late final MockDio dio;

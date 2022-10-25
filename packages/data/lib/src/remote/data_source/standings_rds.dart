@@ -11,8 +11,8 @@ class ApiStandingsRDS implements IStandingsRDS {
     required this.pathBuilder,
   });
 
-  final StandingsHttpClientDio dio;
-  final PathBuilder pathBuilder;
+  final FormulaOneHttpClientDio dio;
+  final IPathBuilder pathBuilder;
 
   @override
   Future<DriverStandingsRM> getDriverStandings(int year) async {

@@ -1,8 +1,8 @@
-abstract class PathBuilder {
-  StandingsPath get standingsPath;
+abstract class IPathBuilder {
+  IStandingsPath get standingsPath;
 }
 
-abstract class StandingsPath {
+abstract class IStandingsPath {
   String driverStandingsPath(int year);
 
   String constructorStandingsPath(int year);

@@ -1,12 +1,12 @@
 import 'package:data/data.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MockPathBuilder extends Mock implements PathBuilder {
+class MockPathBuilder extends Mock implements IPathBuilder {
   @override
-  StandingsPath get standingsPath => MockStandingsPath();
+  IStandingsPath get standingsPath => MockStandingsPath();
 }
 
-class MockStandingsPath extends Mock implements StandingsPath {
+class MockStandingsPath extends Mock implements IStandingsPath {
   @override
   String driverStandingsPath(int year) => '';
 }
