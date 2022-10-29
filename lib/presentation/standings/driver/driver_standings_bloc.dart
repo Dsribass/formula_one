@@ -17,24 +17,33 @@ class DriverStandingsBloc with SubscriptionDisposer {
         .flatMap((_) => _mapToDriverStandingsState())
         .listen(_onNewStateSubject.add)
         .addTo(subscriptions);
+
+    _onDatePickSubject
+        .flatMap(_mapToDriverStandingsState)
+        .listen(_onNewStateSubject.add)
+        .addTo(subscriptions);
   }
 
-  final GetCurrentDriverStandings getCurrentDriverStandings;
+  final GetDriverStandings getCurrentDriverStandings;
 
   final _onNewStateSubject = BehaviorSubject<ViewState>();
   Stream<ViewState> get onNewStateStream => _onNewStateSubject.stream;
 
+  final _onDatePickSubject = PublishSubject<int>();
+  Sink<int> get onDatePickSink => _onDatePickSubject.sink;
+
   final _onTryAgainSubject = PublishSubject<void>();
   Sink<void> get onTryAgainSink => _onTryAgainSubject.sink;
 
-  Stream<ViewState> _mapToDriverStandingsState() async* {
+  Stream<ViewState> _mapToDriverStandingsState([int? year]) async* {
     yield Loading();
 
     try {
-      final driverStandings = await getCurrentDriverStandings(NoParams());
+      final driverStandings = await getCurrentDriverStandings(
+        GetDriverStandingsParams(year: year),
+      );
       yield Success(driverStandings: driverStandings);
     } catch (_) {
-      // TODO: handle errors
       yield GenericError();
     }
   }

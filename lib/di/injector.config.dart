@@ -39,10 +39,10 @@ _i1.GetIt $initGetIt(
       ));
   gh.factory<_i5.IStandingsRepository>(
       () => dataModule.standingsRepository(get<_i4.IStandingsRDS>()));
-  gh.factory<_i5.GetCurrentDriverStandings>(() =>
+  gh.factory<_i5.GetDriverStandings>(() =>
       domainModule.getCurrentDriverStandings(get<_i5.IStandingsRepository>()));
   gh.factory<_i6.DriverStandingsBloc>(() => _i6.DriverStandingsBloc(
-      getCurrentDriverStandings: get<_i5.GetCurrentDriverStandings>()));
+      getCurrentDriverStandings: get<_i5.GetDriverStandings>()));
   return get;
 }
 

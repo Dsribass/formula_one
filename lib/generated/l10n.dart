@@ -69,6 +69,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Temporadas`
+  String get seasonDialogTitle {
+    return Intl.message(
+      'Temporadas',
+      name: 'seasonDialogTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

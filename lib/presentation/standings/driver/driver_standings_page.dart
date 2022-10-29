@@ -22,18 +22,20 @@ class DriverStandingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StandingsScaffold(
-      title: S.of(context).standingsDriverTitle,
-      child: StreamBuilder(
-        stream: bloc.onNewStateStream,
-        builder: (context, snapshot) {
-          return ResponseStateView<Loading, Error, Success>(
-            snapshot: snapshot,
-            onSuccess: (context, success) {
-              final driverStandings = success.driverStandings;
-              final standings = driverStandings.standings;
+    return StreamBuilder(
+      stream: bloc.onNewStateStream,
+      builder: (context, snapshot) {
+        return ResponseStateView<Loading, Error, Success>(
+          snapshot: snapshot,
+          onSuccess: (context, success) {
+            final driverStandings = success.driverStandings;
+            final standings = driverStandings.standings;
 
-              return ListView.separated(
+            return StandingsScaffold(
+              title: S.of(context).standingsDriverTitle,
+              year: driverStandings.year.toString(),
+              onDatePicked: bloc.onDatePickSink.add,
+              child: ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 separatorBuilder: (_, __) => const SizedBox(height: 8),
@@ -43,11 +45,11 @@ class DriverStandingsPage extends StatelessWidget {
                   firstName: standings[index].driver.firstName,
                   lastName: standings[index].driver.lastName,
                 ),
-              );
-            },
-          );
-        },
-      ),
+              ),
+            );
+          },
+        );
+      },
     );
   }
 }
