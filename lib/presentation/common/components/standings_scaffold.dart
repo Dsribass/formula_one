@@ -41,7 +41,7 @@ class StandingsScaffold extends StatelessWidget {
                     color: theme.colorScheme.onBackground,
                   ),
                 ),
-                const SizedBox(height: 48),
+                const SizedBox(height: 28),
                 child,
                 const SizedBox(height: 48),
               ],

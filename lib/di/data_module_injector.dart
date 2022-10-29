@@ -1,6 +1,6 @@
 import 'package:data/data.dart';
 import 'package:domain/domain.dart';
-import 'package:formula_one/utils/path_builder.dart';
+import 'package:formula_one/common/path_builder.dart';
 import 'package:injectable/injectable.dart';
 
 @module

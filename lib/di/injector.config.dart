@@ -10,10 +10,11 @@ import 'package:domain/domain.dart' as _i5;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../utils/path_builder.dart' as _i3;
-import 'data_module_injector.dart' as _i6;
+import '../common/path_builder.dart' as _i3;
+import '../presentation/standings/driver/driver_standings_bloc.dart' as _i6;
+import 'data_module_injector.dart' as _i7;
 import 'domain_module_injector.dart'
-    as _i7; // ignore_for_file: unnecessary_lambdas
+    as _i8; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -40,9 +41,11 @@ _i1.GetIt $initGetIt(
       () => dataModule.standingsRepository(get<_i4.IStandingsRDS>()));
   gh.factory<_i5.GetCurrentDriverStandings>(() =>
       domainModule.getCurrentDriverStandings(get<_i5.IStandingsRepository>()));
+  gh.factory<_i6.DriverStandingsBloc>(() => _i6.DriverStandingsBloc(
+      getCurrentDriverStandings: get<_i5.GetCurrentDriverStandings>()));
   return get;
 }
 
-class _$DataModule extends _i6.DataModule {}
+class _$DataModule extends _i7.DataModule {}
 
-class _$DomainModule extends _i7.DomainModule {}
+class _$DomainModule extends _i8.DomainModule {}

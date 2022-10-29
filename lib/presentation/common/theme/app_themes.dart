@@ -70,19 +70,28 @@ TextStyle _overline = GoogleFonts.inter(
 Color _primary = const Color(0xFFC8102E);
 Color _background = const Color(0xFF0E0E0E);
 Color _grey = const Color(0xFF2F2F2F);
-Color _whiteDark = const Color(0xFFFFFFFF).withOpacity(0.7);
+Color _whiteDark = const Color(0xFFFFFFFF).withOpacity(0.8);
 
 class AppThemes {
   static ThemeData of(BuildContext context) {
     return Theme.of(context);
   }
 
-  static ThemeData get light => ThemeData(
+  static ThemeData get dark => ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: _primary,
-          brightness: Brightness.light,
+          brightness: Brightness.dark,
+          surface: _grey,
+          background: _background,
+          onBackground: _whiteDark,
         ),
-        scaffoldBackgroundColor: _whiteDark,
+        primaryColor: _primary,
+        scaffoldBackgroundColor: _background,
+        cardTheme: CardTheme(
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            )),
         textTheme: TextTheme(
           headline1: _headline1,
           headline2: _headline2,
@@ -100,16 +109,17 @@ class AppThemes {
         ),
       );
 
-  static ThemeData get dark => ThemeData(
+  static ThemeData get light => ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: _primary,
-          brightness: Brightness.dark,
-          surface: _grey,
-          background: _background,
-          onBackground: _whiteDark,
+          brightness: Brightness.light,
         ),
-        primaryColor: _primary,
-        scaffoldBackgroundColor: _background,
+        scaffoldBackgroundColor: _whiteDark,
+        cardTheme: CardTheme(
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            )),
         textTheme: TextTheme(
           headline1: _headline1,
           headline2: _headline2,
