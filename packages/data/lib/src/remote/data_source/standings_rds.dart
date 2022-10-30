@@ -18,6 +18,9 @@ class ApiStandingsRDS implements IStandingsRDS {
   Future<DriverStandingsRM> getDriverStandings(int year) async {
     final response = await dio.get(
       pathBuilder.standingsPath.driverStandingsPath(year),
+      queryParameters: {
+        "limit": 100,
+      }
     );
 
     return DriverStandingsDataRM.fromJson(
