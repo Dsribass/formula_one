@@ -58,6 +58,7 @@ extension FormulaOneThemeData on FormulaOneTheme {
     Brightness brightness,
   ) {
     final colors = FormulaOneColors.of(context);
+    final styles = FormulaOneTextStyles.of(context);
 
     return ThemeData(
       colorScheme: ColorScheme.fromSeed(
@@ -71,6 +72,27 @@ extension FormulaOneThemeData on FormulaOneTheme {
         elevation: 4,
       ),
       scaffoldBackgroundColor: colors.gray900,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.disabled)) {
+              return colors.gray300;
+            }
+            return colors.primary;
+          }),
+          foregroundColor: MaterialStatePropertyAll(colors.white),
+          textStyle: MaterialStateProperty.all(styles.button),
+          padding: const MaterialStatePropertyAll(
+            EdgeInsets.symmetric(
+              vertical: 14,
+              horizontal: 48,
+            ),
+          ),
+          shape: MaterialStatePropertyAll(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+          ),
+        ),
+      ),
       cardTheme: CardTheme(
         elevation: 2,
         color: colors.gray600,

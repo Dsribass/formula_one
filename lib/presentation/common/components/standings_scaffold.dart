@@ -4,7 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:formula_one/generated/l10n.dart';
 import 'package:formula_one/presentation/common/components/season_dialog.dart';
-import 'package:formula_one/presentation/common/theme/app_themes.dart';
+import 'package:formula_one/presentation/common/theme/formula_one_assets.dart';
+import 'package:formula_one/presentation/common/theme/formula_one_colors.dart';
+import 'package:formula_one/presentation/common/theme/formula_one_text_styles.dart';
 
 class StandingsScaffold extends StatelessWidget {
   const StandingsScaffold({
@@ -22,7 +24,9 @@ class StandingsScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = AppThemes.of(context);
+    final colors = FormulaOneColors.of(context);
+    final styles = FormulaOneTextStyles.of(context);
+    final assets = FormulaOneAssets.of(context);
 
     return Scaffold(
       body: SafeArea(
@@ -37,8 +41,8 @@ class StandingsScaffold extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image(
-                      image: theme.assets.logo,
-                      color: theme.colorScheme.primary,
+                      image: assets.logo,
+                      color: colors.primary,
                     ),
                     IconButton(
                       onPressed: () {
@@ -60,14 +64,12 @@ class StandingsScaffold extends StatelessWidget {
                 const SizedBox(height: 10),
                 Text(
                   S.of(context).standingsScaffoldTitle,
-                  style: theme.textTheme.headline5,
+                  style: styles.standingsTitle,
                 ),
                 const SizedBox(height: 8),
                 Text(
                   title,
-                  style: theme.textTheme.headline6?.copyWith(
-                    color: theme.colorScheme.onBackground,
-                  ),
+                  style: styles.standingsSubtitle
                 ),
                 const SizedBox(height: 28),
                 child,

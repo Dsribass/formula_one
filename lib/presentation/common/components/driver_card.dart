@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:formula_one/presentation/common/theme/app_themes.dart';
+import 'package:formula_one/presentation/common/theme/formula_one_colors.dart';
+import 'package:formula_one/presentation/common/theme/formula_one_text_styles.dart';
 
 class DriverCard extends StatelessWidget {
   const DriverCard({
@@ -15,7 +16,8 @@ class DriverCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = AppThemes.of(context);
+    final colors = FormulaOneColors.of(context);
+    final styles = FormulaOneTextStyles.of(context);
 
     return Card(
       child: ClipRRect(
@@ -33,34 +35,19 @@ class DriverCard extends StatelessWidget {
                   width: 65,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: theme.colorScheme.primary,
+                    color: colors.primary,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: Text(
-                      number!,
-                      style: theme.textTheme.headline5?.copyWith(
-                        color: theme.colorScheme.onPrimary,
-                      ),
-                    ),
+                    child: Text(number!, style: styles.driverCardPosition),
                   ),
                 ),
               const SizedBox(width: 24),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    firstName,
-                    style: theme.textTheme.subtitle2?.copyWith(
-                      color: theme.colorScheme.onBackground,
-                    ),
-                  ),
-                  Text(
-                    lastName,
-                    style: theme.textTheme.subtitle1?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  Text(firstName, style: styles.driverCardFirstName),
+                  Text(lastName, style: styles.driverCardLastName),
                 ],
               ),
             ],

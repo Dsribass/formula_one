@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:formula_one/generated/l10n.dart';
-import 'package:formula_one/presentation/common/theme/app_themes.dart';
+import 'package:formula_one/presentation/common/theme/formula_one_colors.dart';
+import 'package:formula_one/presentation/common/theme/formula_one_text_styles.dart';
 
 class SeasonDialog {
   static Iterable<int> get formulaOneYears sync* {
@@ -11,9 +12,11 @@ class SeasonDialog {
   }
 
   static Dialog create(BuildContext context) {
-    final theme = AppThemes.of(context);
+    final colors = FormulaOneColors.of(context);
+    final styles = FormulaOneTextStyles.of(context);
+
     return Dialog(
-      backgroundColor: theme.colorScheme.surface,
+      backgroundColor: colors.gray600,
       elevation: 2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
@@ -27,7 +30,7 @@ class SeasonDialog {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Text(
                 S.of(context).seasonDialogTitle,
-                style: theme.textTheme.headline5,
+                style: styles.dialogTitle,
               ),
             ),
             const SizedBox(
@@ -43,7 +46,7 @@ class SeasonDialog {
                           padding: const EdgeInsets.symmetric(vertical: 8.0),
                           child: Text(
                             '$year',
-                            style: theme.textTheme.headline6,
+                            style: styles.dialogYear,
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -52,7 +55,6 @@ class SeasonDialog {
                     .toList(),
               ),
             ),
-            // const SizedBox(height: 16),
           ],
         ),
       ),

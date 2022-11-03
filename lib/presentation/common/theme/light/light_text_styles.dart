@@ -75,4 +75,19 @@ class LightTextStyles extends FormulaOneTextStyles {
         fontWeight: FontWeight.w600,
         color: colors.white,
       );
+
+  @override
+  TextStyle get button => GoogleFonts.inter(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: colors.white,
+    height: 19.36 / 20
+  );
+
+  @override
+  TextStyle get errorTitle => GoogleFonts.inter(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: colors.white,
+  );
 }

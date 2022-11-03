@@ -30,4 +30,8 @@ abstract class FormulaOneTextStyles {
   TextStyle get dialogTitle;
 
   TextStyle get dialogYear;
+
+  TextStyle get button;
+
+  TextStyle get errorTitle;
 }

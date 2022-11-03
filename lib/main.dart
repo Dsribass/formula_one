@@ -4,7 +4,5 @@ import 'package:formula_one/presentation/formula_one_app.dart';
 
 void main() {
   configureDependencies();
-  runApp(
-    const FormulaOneApp(),
-  );
+  runApp(FormulaOneApp());
 }
