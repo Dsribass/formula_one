@@ -95,7 +95,7 @@ extension FormulaOneThemeData on FormulaOneTheme {
       ),
       cardTheme: CardTheme(
         elevation: 2,
-        color: colors.gray600,
+        color: colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),

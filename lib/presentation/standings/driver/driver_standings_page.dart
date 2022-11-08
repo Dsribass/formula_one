@@ -41,7 +41,8 @@ class DriverStandingsPage extends StatelessWidget {
                 separatorBuilder: (_, __) => const SizedBox(height: 8),
                 itemCount: standings.length,
                 itemBuilder: (context, index) => DriverCard(
-                  number: '${index+1}',
+                  position: '${index+1}',
+                  points: standings[index].points,
                   firstName: standings[index].driver.firstName,
                   lastName: standings[index].driver.lastName,
                 ),

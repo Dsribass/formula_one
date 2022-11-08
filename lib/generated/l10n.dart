@@ -79,6 +79,16 @@ class S {
       args: [],
     );
   }
+
+  /// `{points} pts`
+  String driverCardPoints(Object points) {
+    return Intl.message(
+      '$points pts',
+      name: 'driverCardPoints',
+      desc: '',
+      args: [points],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
