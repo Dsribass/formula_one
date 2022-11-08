@@ -27,14 +27,14 @@ class LightColors implements FormulaOneColors {
   Color get secondary => _secondary;
 
   @override
-  Color get gray900 => _gray900;
+  Color get darkBg => _gray900;
 
   @override
-  Color get gray600 => _gray600;
+  Color get mediumBg => _gray600;
 
   @override
-  Color get gray300 => _gray300;
+  Color get lightBg => _gray300;
 
   @override
-  Color get gray100 => _gray100;
+  Color get darkWhite => _gray100;
 }

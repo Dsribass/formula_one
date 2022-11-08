@@ -17,28 +17,28 @@ class LightTextStyles extends FormulaOneTextStyles {
   TextStyle get standingsSubtitle => GoogleFonts.spaceGrotesk(
         fontSize: 24,
         fontWeight: FontWeight.w700,
-        color: colors.gray100,
+        color: colors.darkWhite,
       );
 
   @override
   TextStyle get standingsYear => GoogleFonts.spaceGrotesk(
         fontSize: 14,
         fontWeight: FontWeight.w400,
-        color: colors.gray100,
+        color: colors.darkWhite,
       );
 
   @override
   TextStyle get driverCardFirstName => GoogleFonts.inter(
         fontSize: 16,
         fontWeight: FontWeight.w600,
-        color: colors.gray600,
+        color: colors.darkWhite,
       );
 
   @override
   TextStyle get driverCardLastName => GoogleFonts.inter(
         fontSize: 20,
         fontWeight: FontWeight.w600,
-        color: colors.black,
+        color: colors.white,
       );
 
   @override
@@ -59,7 +59,7 @@ class LightTextStyles extends FormulaOneTextStyles {
   TextStyle get driverCardPosition => GoogleFonts.spaceGrotesk(
         fontSize: 24,
         fontWeight: FontWeight.w700,
-        color: colors.black,
+        color: colors.white,
       );
 
   @override

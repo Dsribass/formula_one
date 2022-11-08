@@ -16,11 +16,11 @@ abstract class FormulaOneColors {
 
   Color get secondary;
 
-  Color get gray900;
+  Color get darkBg;
 
-  Color get gray600;
+  Color get mediumBg;
 
-  Color get gray300;
+  Color get lightBg;
 
-  Color get gray100;
+  Color get darkWhite;
 }

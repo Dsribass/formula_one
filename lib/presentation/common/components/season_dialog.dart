@@ -16,7 +16,7 @@ class SeasonDialog {
     final styles = FormulaOneTextStyles.of(context);
 
     return Dialog(
-      backgroundColor: colors.gray600,
+      backgroundColor: colors.mediumBg,
       elevation: 2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),

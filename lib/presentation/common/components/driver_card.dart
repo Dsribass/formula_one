@@ -46,10 +46,10 @@ class DriverCard extends StatelessWidget {
                     Container(
                       height: 21,
                       width: 1,
-                      color: colors.black,
+                      color: colors.white,
                     ),
                     const SizedBox(
-                      width: 8,
+                      width: 12,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,8 +62,10 @@ class DriverCard extends StatelessWidget {
                 ),
               ),
               Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 6, horizontal: 32),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 6,
+                  horizontal: 32,
+                ),
                 decoration: BoxDecoration(
                   color: colors.primary,
                   borderRadius: BorderRadius.circular(100),

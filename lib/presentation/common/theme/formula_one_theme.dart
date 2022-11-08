@@ -64,19 +64,19 @@ extension FormulaOneThemeData on FormulaOneTheme {
       colorScheme: ColorScheme.fromSeed(
         brightness: brightness,
         seedColor: colors.primary,
-        background: colors.gray900,
-        surface: colors.gray600,
+        background: colors.darkBg,
+        surface: colors.mediumBg,
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: colors.gray600,
+        backgroundColor: colors.mediumBg,
         elevation: 4,
       ),
-      scaffoldBackgroundColor: colors.gray900,
+      scaffoldBackgroundColor: colors.darkBg,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.disabled)) {
-              return colors.gray300;
+              return colors.lightBg;
             }
             return colors.primary;
           }),
@@ -95,7 +95,7 @@ extension FormulaOneThemeData on FormulaOneTheme {
       ),
       cardTheme: CardTheme(
         elevation: 2,
-        color: colors.white,
+        color: colors.mediumBg,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
