@@ -2,17 +2,23 @@ import '../../entities/entities.dart';
 import '../../repository/repository.dart';
 import '../use_case.dart';
 
-class GetCurrentDriverStandings
-    extends UseCase<NoParams, Standings<DriverStanding>> {
-  const GetCurrentDriverStandings({
+class GetDriverStandings
+    extends UseCase<GetDriverStandingsParams, Standings<DriverStanding>> {
+  const GetDriverStandings({
     required this.repository,
   });
 
   final IStandingsRepository repository;
 
   @override
-  Future<Standings<DriverStanding>> execute(NoParams params) =>
+  Future<Standings<DriverStanding>> execute(GetDriverStandingsParams params) =>
       repository.getDriverStandings(
-        year: DateTime.now().year,
+        year: params.year ?? DateTime.now().year,
       );
+}
+
+class GetDriverStandingsParams {
+  GetDriverStandingsParams({this.year});
+
+  final Year? year;
 }

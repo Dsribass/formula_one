@@ -49,6 +49,46 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Classificação`
+  String get standingsScaffoldTitle {
+    return Intl.message(
+      'Classificação',
+      name: 'standingsScaffoldTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pilotos`
+  String get standingsDriverTitle {
+    return Intl.message(
+      'Pilotos',
+      name: 'standingsDriverTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Temporadas`
+  String get seasonDialogTitle {
+    return Intl.message(
+      'Temporadas',
+      name: 'seasonDialogTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{points} pts`
+  String driverCardPoints(Object points) {
+    return Intl.message(
+      '$points pts',
+      name: 'driverCardPoints',
+      desc: '',
+      args: [points],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

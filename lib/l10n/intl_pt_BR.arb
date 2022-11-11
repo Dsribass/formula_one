@@ -1,3 +1,7 @@
 {
-  "@@locale": "pt_BR"
+  "@@locale": "pt_BR",
+  "standingsScaffoldTitle": "Classificação",
+  "standingsDriverTitle": "Pilotos",
+  "seasonDialogTitle": "Temporadas",
+  "driverCardPoints": "{points} pts"
 }

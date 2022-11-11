@@ -20,6 +20,14 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pt_BR';
 
+  static String m0(points) => "${points} pts";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "driverCardPoints": m0,
+        "seasonDialogTitle": MessageLookupByLibrary.simpleMessage("Temporadas"),
+        "standingsDriverTitle": MessageLookupByLibrary.simpleMessage("Pilotos"),
+        "standingsScaffoldTitle":
+            MessageLookupByLibrary.simpleMessage("Classificação")
+      };
 }

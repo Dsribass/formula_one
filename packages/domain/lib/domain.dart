@@ -6,3 +6,5 @@ library domain;
 export 'src/entities/entities.dart';
 export 'src/repository/repository.dart';
 export 'src/use_cases/use_cases.dart';
+export 'src/use_cases/use_case.dart' show NoParams;
+export 'src/exceptions.dart';
