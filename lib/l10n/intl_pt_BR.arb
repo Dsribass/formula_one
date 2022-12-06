@@ -1,5 +1,7 @@
 {
   "@@locale": "pt_BR",
+  "bottomBarDriverStandings": "Pilotos",
+  "bottomBarTeamStandings": "Construtores",
   "standingsScaffoldTitle": "Classificação",
   "standingsDriverTitle": "Pilotos",
   "seasonDialogTitle": "Temporadas",

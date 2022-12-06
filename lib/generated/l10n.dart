@@ -50,6 +50,26 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Pilotos`
+  String get bottomBarDriverStandings {
+    return Intl.message(
+      'Pilotos',
+      name: 'bottomBarDriverStandings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Construtores`
+  String get bottomBarTeamStandings {
+    return Intl.message(
+      'Construtores',
+      name: 'bottomBarTeamStandings',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Classificação`
   String get standingsScaffoldTitle {
     return Intl.message(
