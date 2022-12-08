@@ -28,8 +28,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pilotos"),
         "bottomBarTeamStandings":
             MessageLookupByLibrary.simpleMessage("Construtores"),
-        "driverCardPoints": m0,
         "seasonDialogTitle": MessageLookupByLibrary.simpleMessage("Temporadas"),
+        "standingCardPoints": m0,
+        "standingsConstructorTitle":
+            MessageLookupByLibrary.simpleMessage("Construtores"),
         "standingsDriverTitle": MessageLookupByLibrary.simpleMessage("Pilotos"),
         "standingsScaffoldTitle":
             MessageLookupByLibrary.simpleMessage("Classificação")

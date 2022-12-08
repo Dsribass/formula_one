@@ -17,13 +17,13 @@ abstract class FormulaOneTextStyles {
 
   TextStyle get standingsYear;
 
-  TextStyle get driverCardPosition;
+  TextStyle get standingCardPosition;
 
-  TextStyle get driverCardFirstName;
+  TextStyle get standingCardTitle;
 
-  TextStyle get driverCardLastName;
+  TextStyle get standingCardSubtitle;
 
-  TextStyle get driverCardPoints;
+  TextStyle get standingCardPoints;
 
   TextStyle get driverCardNumber;
 

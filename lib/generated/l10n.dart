@@ -90,6 +90,16 @@ class S {
     );
   }
 
+  /// `Construtores`
+  String get standingsConstructorTitle {
+    return Intl.message(
+      'Construtores',
+      name: 'standingsConstructorTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Temporadas`
   String get seasonDialogTitle {
     return Intl.message(
@@ -101,10 +111,10 @@ class S {
   }
 
   /// `{points} pts`
-  String driverCardPoints(Object points) {
+  String standingCardPoints(Object points) {
     return Intl.message(
       '$points pts',
-      name: 'driverCardPoints',
+      name: 'standingCardPoints',
       desc: '',
       args: [points],
     );
