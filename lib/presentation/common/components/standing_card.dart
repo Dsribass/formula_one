@@ -51,16 +51,18 @@ class StandingCard extends StatelessWidget {
                     const SizedBox(
                       width: 12,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(title,
-                            style: subtitle != null
-                                ? styles.standingCardTitle
-                                : styles.standingCardSubtitle),
-                        if (subtitle != null)
-                          Text(subtitle!, style: styles.standingCardSubtitle),
-                      ],
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(title,
+                              style: subtitle != null
+                                  ? styles.standingCardTitle
+                                  : styles.standingCardSubtitle),
+                          if (subtitle != null)
+                            Text(subtitle!, style: styles.standingCardSubtitle),
+                        ],
+                      ),
                     ),
                   ],
                 ),

@@ -4,8 +4,14 @@ import 'package:injectable/injectable.dart';
 @module
 abstract class DomainModule {
   @injectable
-  GetDriverStandings getCurrentDriverStandings(
+  GetDriverStandings getDriverStandings(
     IStandingsRepository repository,
   ) =>
       GetDriverStandings(repository: repository);
+
+  @injectable
+  GetConstructorStandings getConstructorStandings(
+      IStandingsRepository repository,
+      ) =>
+      GetConstructorStandings(repository: repository);
 }
