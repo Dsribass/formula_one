@@ -1,7 +1,7 @@
 import 'package:domain/domain.dart';
 
-import '../remote/remote.dart';
 import '../mappers/remote_to_domain.dart';
+import '../remote/remote.dart';
 
 class StandingsRepository implements IStandingsRepository {
   const StandingsRepository({
@@ -13,15 +13,16 @@ class StandingsRepository implements IStandingsRepository {
   @override
   Future<Standings<ConstructorStanding>> getConstructorStandings({
     required Year year,
-  }) {
-    throw UnimplementedError();
-  }
+  }) =>
+      standingsRDS.getConstructorStandings(year).then(
+            (e) => e.toDM(),
+          );
 
   @override
   Future<Standings<DriverStanding>> getDriverStandings({
     required Year year,
-  }) async {
-    final driverStandingsRM = await standingsRDS.getDriverStandings(year);
-    return driverStandingsRM.toDM();
-  }
+  }) =>
+      standingsRDS.getDriverStandings(year).then(
+            (e) => e.toDM(),
+          );
 }

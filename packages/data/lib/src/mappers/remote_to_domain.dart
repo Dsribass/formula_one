@@ -1,5 +1,7 @@
 import 'package:domain/domain.dart';
 
+import '../remote/models/constructor_standing_rm.dart';
+import '../remote/models/constructor_standings_rm.dart';
 import '../remote/models/models.dart';
 
 extension DriverStandingsRMtoDM on DriverStandingsRM {
@@ -52,6 +54,33 @@ extension on ConstructorRM {
       url: url,
       nationality: nationality,
       name: name,
+    );
+  }
+}
+
+extension ConstructorStandingsRMtoDM on ConstructorStandingsRM {
+  Standings<ConstructorStanding> toDM() {
+    return Standings(
+      year: int.parse(season),
+      round: int.parse(round),
+      standings: standings.toDM(),
+    );
+  }
+}
+
+extension on List<ConstructorStandingRM> {
+  List<ConstructorStanding> toDM() => map(
+        (driverStandingRM) => driverStandingRM.toDM(),
+      ).toList();
+}
+
+extension on ConstructorStandingRM {
+  ConstructorStanding toDM() {
+    return ConstructorStanding(
+      points: double.parse(points),
+      position: int.parse(position),
+      wins: int.parse(wins),
+      constructor: constructor.toDM(),
     );
   }
 }
