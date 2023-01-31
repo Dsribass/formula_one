@@ -26,9 +26,17 @@ class ApiStandingsRDS implements IStandingsRDS {
           "limit": 100,
         });
 
-    return DriverStandingsDataRM.fromJson(
+    final driverStandingsRM = DriverStandingsDataRM.fromJson(
       response.data,
-    ).driverStandingsRM.first;
+    ).driverStandingsRM;
+
+    return driverStandingsRM.isNotEmpty
+        ? driverStandingsRM.first
+        : DriverStandingsRM(
+            season: year.toString(),
+            round: '1',
+            standings: [],
+          );
   }
 
   @override
@@ -39,8 +47,16 @@ class ApiStandingsRDS implements IStandingsRDS {
           "limit": 100,
         });
 
-    return ConstructorStandingsDataRM.fromJson(
+    final constructorStandingsRM = ConstructorStandingsDataRM.fromJson(
       response.data,
-    ).constructorStandingsRM.first;
+    ).constructorStandingsRM;
+
+    return constructorStandingsRM.isNotEmpty
+        ? constructorStandingsRM.first
+        : ConstructorStandingsRM(
+            season: year.toString(),
+            round: '1',
+            standings: [],
+          );
   }
 }

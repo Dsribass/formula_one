@@ -27,7 +27,7 @@ extension on DriverStandingRM {
       position: int.parse(position),
       wins: int.parse(wins),
       driver: driver.toDM(),
-      constructor: constructors.first.toDM(),
+      constructors: constructors.map((e) => e.toDM()).toList(),
     );
   }
 }

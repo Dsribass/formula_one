@@ -8,7 +8,7 @@ class DriverStanding extends Standing {
     required int position,
     required int wins,
     required this.driver,
-    required this.constructor,
+    required this.constructors,
   }) : super(
           points: points,
           position: position,
@@ -16,5 +16,5 @@ class DriverStanding extends Standing {
         );
 
   final Driver driver;
-  final Constructor constructor;
+  final List<Constructor> constructors;
 }
