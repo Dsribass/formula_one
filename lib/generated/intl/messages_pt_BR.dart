@@ -24,8 +24,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "driverCardPoints": m0,
+        "bottomBarDriverStandings":
+            MessageLookupByLibrary.simpleMessage("Pilotos"),
+        "bottomBarTeamStandings":
+            MessageLookupByLibrary.simpleMessage("Construtores"),
         "seasonDialogTitle": MessageLookupByLibrary.simpleMessage("Temporadas"),
+        "standingCardPoints": m0,
+        "standingsConstructorTitle":
+            MessageLookupByLibrary.simpleMessage("Construtores"),
         "standingsDriverTitle": MessageLookupByLibrary.simpleMessage("Pilotos"),
         "standingsScaffoldTitle":
             MessageLookupByLibrary.simpleMessage("Classificação")

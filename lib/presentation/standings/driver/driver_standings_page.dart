@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:formula_one/di/injector.dart';
 import 'package:formula_one/generated/l10n.dart';
-import 'package:formula_one/presentation/common/components/driver_card.dart';
+import 'package:formula_one/presentation/common/components/standing_card.dart';
 import 'package:formula_one/presentation/common/components/response_state/response_state_view.dart';
 import 'package:formula_one/presentation/common/components/response_state/state.dart';
 import 'package:formula_one/presentation/common/components/standings_scaffold.dart';
@@ -40,11 +40,11 @@ class DriverStandingsPage extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 separatorBuilder: (_, __) => const SizedBox(height: 8),
                 itemCount: standings.length,
-                itemBuilder: (context, index) => DriverCard(
+                itemBuilder: (context, index) => StandingCard(
                   position: '${index+1}',
                   points: standings[index].points,
-                  firstName: standings[index].driver.firstName,
-                  lastName: standings[index].driver.lastName,
+                  title: standings[index].driver.firstName,
+                  subtitle: standings[index].driver.lastName,
                 ),
               ),
             );

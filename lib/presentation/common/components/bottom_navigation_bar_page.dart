@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:formula_one/generated/l10n.dart';
 import 'package:routemaster/routemaster.dart';
 
 class BottomNavigationBarPage extends StatefulWidget {
@@ -31,8 +32,14 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
           pageState.index = index;
         }),
         items: [
-          BottomNavigationBarItem(icon: Container(), label: 'First'),
-          BottomNavigationBarItem(icon: Container(), label: 'Second'),
+          BottomNavigationBarItem(
+            icon: Container(),
+            label: S.of(context).bottomBarDriverStandings,
+          ),
+          BottomNavigationBarItem(
+            icon: Container(),
+            label: S.of(context).bottomBarTeamStandings,
+          ),
         ],
       ),
     );

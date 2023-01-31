@@ -3,19 +3,19 @@ import 'package:formula_one/generated/l10n.dart';
 import 'package:formula_one/presentation/common/theme/formula_one_colors.dart';
 import 'package:formula_one/presentation/common/theme/formula_one_text_styles.dart';
 
-class DriverCard extends StatelessWidget {
-  const DriverCard({
-    required this.firstName,
-    required this.lastName,
+class StandingCard extends StatelessWidget {
+  const StandingCard({
+    required this.title,
     required this.points,
     required this.position,
+    this.subtitle,
     Key? key,
   }) : super(key: key);
 
   final String position;
   final double points;
-  final String firstName;
-  final String lastName;
+  final String title;
+  final String? subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class DriverCard extends StatelessWidget {
                   children: [
                     Text(
                       position,
-                      style: styles.driverCardPosition,
+                      style: styles.standingCardPosition,
                     ),
                     const SizedBox(
                       width: 8,
@@ -51,12 +51,18 @@ class DriverCard extends StatelessWidget {
                     const SizedBox(
                       width: 12,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(firstName, style: styles.driverCardFirstName),
-                        Text(lastName, style: styles.driverCardLastName),
-                      ],
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(title,
+                              style: subtitle != null
+                                  ? styles.standingCardTitle
+                                  : styles.standingCardSubtitle),
+                          if (subtitle != null)
+                            Text(subtitle!, style: styles.standingCardSubtitle),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -71,8 +77,8 @@ class DriverCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: Text(
-                  S.of(context).driverCardPoints(points.round()),
-                  style: styles.driverCardPoints,
+                  S.of(context).standingCardPoints(points.round()),
+                  style: styles.standingCardPoints,
                 ),
               )
             ],

@@ -28,14 +28,14 @@ class LightTextStyles extends FormulaOneTextStyles {
       );
 
   @override
-  TextStyle get driverCardFirstName => GoogleFonts.inter(
+  TextStyle get standingCardTitle => GoogleFonts.inter(
         fontSize: 16,
         fontWeight: FontWeight.w600,
         color: colors.darkWhite,
       );
 
   @override
-  TextStyle get driverCardLastName => GoogleFonts.inter(
+  TextStyle get standingCardSubtitle => GoogleFonts.inter(
         fontSize: 20,
         fontWeight: FontWeight.w600,
         color: colors.white,
@@ -49,14 +49,14 @@ class LightTextStyles extends FormulaOneTextStyles {
       );
 
   @override
-  TextStyle get driverCardPoints => GoogleFonts.inter(
+  TextStyle get standingCardPoints => GoogleFonts.inter(
         fontSize: 20,
         fontWeight: FontWeight.w600,
         color: colors.white,
       );
 
   @override
-  TextStyle get driverCardPosition => GoogleFonts.spaceGrotesk(
+  TextStyle get standingCardPosition => GoogleFonts.spaceGrotesk(
         fontSize: 24,
         fontWeight: FontWeight.w700,
         color: colors.white,

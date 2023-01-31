@@ -22,8 +22,8 @@ class AppRouteMap extends RouteMap {
             _standingsDriver: (_) => MaterialPage(
                   child: DriverStandingsPage.create(),
                 ),
-            _standingsConstructor: (_) => const MaterialPage(
-                  child: ConstructorStandingsPage(),
+            _standingsConstructor: (_) => MaterialPage(
+                  child: ConstructorStandingsPage.create(),
                 ),
           },
         );
