@@ -8,6 +8,7 @@ class StandingCard extends StatelessWidget {
     required this.title,
     required this.points,
     required this.position,
+    required this.onPressed,
     this.subtitle,
     Key? key,
   }) : super(key: key);
@@ -16,6 +17,7 @@ class StandingCard extends StatelessWidget {
   final double points;
   final String title;
   final String? subtitle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class StandingCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: MaterialButton(
-          onPressed: () {},
+          onPressed: onPressed,
           padding: const EdgeInsets.symmetric(
             vertical: 16,
             horizontal: 12,

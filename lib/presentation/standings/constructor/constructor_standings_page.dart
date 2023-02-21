@@ -9,10 +9,12 @@ import 'package:formula_one/presentation/common/components/response_state/state.
 import 'package:formula_one/presentation/common/components/season_dialog.dart';
 import 'package:formula_one/presentation/common/components/standing_card.dart';
 import 'package:formula_one/presentation/common/components/standings.dart';
+import 'package:formula_one/presentation/common/routing.dart';
 import 'package:formula_one/presentation/common/theme/formula_one_assets.dart';
 import 'package:formula_one/presentation/common/theme/formula_one_colors.dart';
 import 'package:formula_one/presentation/standings/constructor/constructor_standings_bloc.dart';
 import 'package:formula_one/presentation/standings/constructor/constructor_standings_models.dart';
+import 'package:routemaster/routemaster.dart';
 
 class ConstructorStandingsPage extends StatelessWidget {
   const ConstructorStandingsPage({required this.bloc, Key? key})
@@ -67,6 +69,10 @@ class ConstructorStandingsPage extends StatelessWidget {
                       position: '${index + 1}',
                       points: standings[index].points,
                       title: standings[index].constructor.name,
+                      onPressed: () =>
+                          Routemaster.of(context).pushConstructorPage(
+                        standings[index].constructor.id,
+                      ),
                     );
                   },
                 ),

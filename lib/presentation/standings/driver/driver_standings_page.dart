@@ -9,10 +9,12 @@ import 'package:formula_one/presentation/common/components/response_state/state.
 import 'package:formula_one/presentation/common/components/season_dialog.dart';
 import 'package:formula_one/presentation/common/components/standing_card.dart';
 import 'package:formula_one/presentation/common/components/standings.dart';
+import 'package:formula_one/presentation/common/routing.dart';
 import 'package:formula_one/presentation/common/theme/formula_one_assets.dart';
 import 'package:formula_one/presentation/common/theme/formula_one_colors.dart';
 import 'package:formula_one/presentation/standings/driver/driver_standings_bloc.dart';
 import 'package:formula_one/presentation/standings/driver/driver_standings_models.dart';
+import 'package:routemaster/routemaster.dart';
 
 class DriverStandingsPage extends StatelessWidget {
   const DriverStandingsPage({
@@ -70,6 +72,9 @@ class DriverStandingsPage extends StatelessWidget {
                     points: standings[index].points,
                     title: standings[index].driver.firstName,
                     subtitle: standings[index].driver.lastName,
+                    onPressed: () => Routemaster.of(context).pushDriverPage(
+                      standings[index].driver.id,
+                    ),
                   ),
                 ),
               );
