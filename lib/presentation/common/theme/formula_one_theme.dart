@@ -67,6 +67,11 @@ extension FormulaOneThemeData on FormulaOneTheme {
         background: colors.darkBg,
         surface: colors.mediumBg,
       ),
+      appBarTheme: const AppBarTheme(
+        centerTitle: false,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: colors.mediumBg,
         elevation: 4,
